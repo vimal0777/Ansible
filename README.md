@@ -4,7 +4,7 @@
 Ansible is an open-source automation platform. It is very, very simple to set up and yet powerful. Ansible can help you with configuration management, application deployment, task automation.
 
 ### Pre-requisites
-An AWS EC2 instance (on Control node)
+An AWS EC2 Ubuntu instance (on Control node)
 Installation steps:
 on Amazon EC2 instance
 
@@ -13,19 +13,16 @@ on Amazon EC2 instance
 
 
 
-#### Step-1:
+#### Step-1: 
 
-#### Master Server :
+#### Install ansible on Master Server :
 ```sh
- yum install python													sudo yum-config-manager --enable epel
-													( Or)           	yum repolist
- yum install python-pip                     yum install ansible
+$ sudo apt update
+$ sudo apt install software-properties-common
+$ sudo apt-add-repository --yes --update ppa:ansible/ansible
+$ sudo apt install ansible
 ```
-### Install ansible using pip check for version
-```sh
-pip install ansible
-ansible --version
-```
+
 
 ### Step-2:
 
