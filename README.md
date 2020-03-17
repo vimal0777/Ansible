@@ -41,8 +41,9 @@ $NEW-USER-NAME ALL=(ALL) NOPASSWD: ALL
 ```sh
 vi /etc/ssh/sshd_config
 ```
-set ->  ```sh PasswordAuthentication yes```
-		(OR)
+set ->  
+```sh PasswordAuthentication yes```
+	(OR)
 ```sh 
 sed command replaces "PasswordAuthentication no to yes" without editing file
 sed -ie 's/PasswordAuthentication no/PasswordAuthentication yes/' /etc/ssh/sshd_config		
